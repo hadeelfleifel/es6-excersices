@@ -168,31 +168,51 @@ console.log(onlyEvenValues())
 Sample arguments : 'abacddbec' 
 Expected output : 'e' 
 */
-// var arr = 'abacddbec';
-// const Arguments = () =>{
-// 	var character= arr.split('');
+// function find_FirstNotRepeatedChar(str) {
+// 	var arra1 = str.split('');
 // 	var result = '';
-//   	var ctr = 0;
-// 	for(const index of character){
-// 		ctr = 0;
-// 	for(const fchar of character){
-// 		if (fchar === index) {
-// 			ctr+= 1;
-// 		  }
-// 		  if (ctr < 1) {
-// 			result = arra1[x];
-// 			break;
-// 		  }
-// 	}  
+// 	var ctr = 0;
+   
+// 	for (var x = 0; x < arra1.length; x++) {
+// 	  ctr = 0;
+   
+// 	  for (var y = 0; y < arra1.length; y++) 
+// 	  {
+// 		if (arra1[x] === arra1[y]) {
+// 		  ctr+= 1;
+// 		}
+// 	  }
+   
+// 	  if (ctr < 2) {
+// 		result = arra1[x];
+// 		break;
+// 	  }
+// 	}
+// 	return result;
+//   }
+//   console.log(find_FirstNotRepeatedChar('abacddbec'));
 
+const Arguments = (arr)=>{
+	var array =arr.split('');
+	var result = '';
+	var count=0;
 
+	for (i=0;i<array.length;i++){
+		count=0;
+		for(y=0;y<array.length;y++){
+			if(array[i]===array[y]){
+				count=count+1;
+			}
+		}
+		if(count<2){
+			result=array[i];
+			break
+		}
+	}
+	return result;
 
-// 	}return result;
-// }
-// console.log(Arguments());
-
-
-
+}
+console.log(Arguments('abacddbec'));
 
 /*Exercise 9:Use destructuring to initialize the variables `one`, `two`, and `three` with the colors from the `things` array.
  */
